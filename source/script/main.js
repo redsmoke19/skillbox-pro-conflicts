@@ -1,8 +1,9 @@
 import "../scss/style.scss"
-import {initSort} from "@/script/modules/sort.js";
-import {initFilter} from "@/script/modules/filter.js";
 import {iosVhFix} from "./utils/ios-vh-fix.js";
 import {ScrollLock} from "./utils/scroll-lock.js";
+import {initSearch} from "@/script/modules/search.js";
+import {initSort} from "@/script/modules/sort.js";
+import {initFilter} from "@/script/modules/filter.js";
 
 window.addEventListener('DOMContentLoaded', () => {
   window.scrollLock = new ScrollLock();
@@ -11,7 +12,8 @@ window.addEventListener('DOMContentLoaded', () => {
   console.log('Проверка работа скриптов');
 
   window.addEventListener('load', () => {
-    initFilter();
     initSort();
+    initSearch();
+    initFilter();
   });
 });
